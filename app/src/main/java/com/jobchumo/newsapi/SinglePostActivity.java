@@ -8,6 +8,7 @@ import android.webkit.WebView;
 
 public class SinglePostActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,11 +20,12 @@ public class SinglePostActivity extends AppCompatActivity {
     private void loadNewsArticle() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading");
+        progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
         final String url = getIntent().getStringExtra("url");
-        WebView webView = findViewById(R.id.single_post);
-        webView.loadUrl(url);
+        WebView newsView = findViewById(R.id.single_post);
+        newsView.loadUrl(url);
 
         progressDialog.hide();
     }
