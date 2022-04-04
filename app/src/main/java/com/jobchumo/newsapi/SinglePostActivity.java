@@ -13,6 +13,10 @@ public class SinglePostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_post);
 
+        loadNewsArticle();
+    }
+
+    private void loadNewsArticle() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading");
         progressDialog.show();
