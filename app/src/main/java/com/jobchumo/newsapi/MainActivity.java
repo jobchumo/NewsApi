@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements com.jobchumo.news
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading top headlines in the United States");
+        progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
         final RecyclerView newsRecycler = findViewById(R.id.newsRecyclerView);
